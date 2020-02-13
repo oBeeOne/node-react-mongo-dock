@@ -1,0 +1,28 @@
+version: "3.7"
+services: 
+    # Service API
+    api:
+        build: ./api
+        ports: 
+            - 5000:5000
+        volumes: 
+            - ./api:/usr/src/app/api
+        links: mongo
+        command: npm run dev
+
+    # Service Client
+    client:
+        build: ./client
+        ports: 
+            - 8080:8080
+        volumes: 
+            - ./client:/usr/src/app/client
+        links: 
+            - api
+        command: npm run start
+
+    # Service mongo
+    mongo:
+        image: mongo:3.6.4
+        ports: 
+            - 27017:27017
