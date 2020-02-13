@@ -9,6 +9,8 @@
     "author": "oBeeOne",
     "license": "GPL-3.0",
     "dependencies": {
-
+        "express": "",
+        "mongoose": "",
+        "nodemon": ""
     }
 }

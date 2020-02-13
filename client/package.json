@@ -8,6 +8,6 @@
     "author": "oBeeOne",
     "license": "GPL-3.0",
     "dependencies": {
-
+        "create-react-app": ""
     }
 }
