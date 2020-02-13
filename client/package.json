@@ -1,0 +1,13 @@
+{
+    "name": "client",
+    "version": "1.0.0",
+    "description": "Simple React app",
+    "scripts": {
+        "start": "node client.js"
+    },
+    "author": "oBeeOne",
+    "license": "GPL-3.0",
+    "dependencies": {
+
+    }
+}
