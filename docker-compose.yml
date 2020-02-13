@@ -11,11 +11,11 @@ services:
             - mongo
         command: npm run dev
 
-    # Service Client
-    client:
-        image: client:latest
+    # Service React
+    myreact:
+        image: myreact:latest
         ports: 
-            - 8080:8080
+            - 4000:3000
         volumes: 
             - ./client:/usr/src/app/client
         links: 
