@@ -17,7 +17,7 @@ services:
         ports: 
             - 4000:3000
         volumes: 
-            - ./client:/usr/src/app/client
+            - ./myreact:/usr/src/app/myreact
         links: 
             - api
         command: npm run start
