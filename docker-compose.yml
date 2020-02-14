@@ -9,7 +9,7 @@ services:
             - ./api:/usr/src/app/api
         links: 
             - mongo
-        command: npm run dev
+    #    command: npm start
 
     # Service React
     myreact:
@@ -20,7 +20,7 @@ services:
             - ./myreact:/usr/src/app/myreact
         links: 
             - api
-        command: npm run start
+    #   command: npm start
 
     # Service mongo
     mongo:

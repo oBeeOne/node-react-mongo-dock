@@ -8,8 +8,8 @@ COPY package*.json ./
 EXPOSE 3000
 
 RUN npm install --silent
-RUN npm install react-scripts@3.0.1 -g --silent
+RUN npm install react-scripts@3.3.1 -g --silent
 
-COPY . .
+#COPY . .
 
 CMD ["nmp", "start"]
