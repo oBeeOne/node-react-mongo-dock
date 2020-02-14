@@ -4,7 +4,7 @@ services:
     api:
         image: api:latest
         ports: 
-            - 5000:5000
+            - "5000:5000"
         volumes: 
             - ./api:/usr/src/app/api
         links: 
@@ -15,7 +15,7 @@ services:
     myreact:
         image: myreact:latest
         ports: 
-            - 4000:3000
+            - "4000:3000"
         volumes: 
             - ./myreact:/usr/src/app/myreact
         links: 
@@ -26,4 +26,18 @@ services:
     mongo:
         image: mongo:3.6.4
         ports: 
-            - 27017:27017
+            - "27017:27017"
+
+    # Service Mongo-Express web interface
+    #mongo-express:
+    #    image: mongo-express:latest
+    #    ports: 
+    #        - "10000:10000"
+    #    environment: 
+    #        - ME_CONFIG_OPTIONS_EDITORTHEME=ambiance
+    #        - ME_CONFIG_MONGODB_SERVER=mongo
+    #        - ME_CONFIG_MONGODB_PORT=27017
+            #- ME_CONFIG_BASICAUTH_USERNAME="user"
+            #- ME_CONFIG_BASICAUTH_PASSWORD="MyWTFp4ssW0rdT00long"
+    #    links:   
+    #        - mongo
