@@ -5,11 +5,10 @@ WORKDIR /usr/src/app/api
 
 COPY package*.json /usr/src/app/api/
 
-EXPOSE 5000
-
 RUN npm install --silent
 
 COPY . .
 
-#CMD ["npm", "start"]
+EXPOSE 5000
+
 CMD ["npm", "run", "dev"]

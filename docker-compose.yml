@@ -20,7 +20,7 @@ services:
             - ./myreact:/usr/src/app/myreact
         links: 
             - api
-       command: npm start
+        command: npm run start
 
     # Service mongo
     mongo: 
