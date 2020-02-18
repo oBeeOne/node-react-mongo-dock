@@ -2,6 +2,7 @@ version: "3.7"
 services: 
     # Service API
     api: 
+        build: ./api
         image: api:latest
         ports: 
             - "5000:5000"
@@ -13,6 +14,7 @@ services:
 
     # Service React
     myreact: 
+        build: ./myreact
         image: myreact:latest
         ports: 
             - "3000:3000"
