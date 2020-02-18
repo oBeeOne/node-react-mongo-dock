@@ -1,11 +1,14 @@
 const mongoose = require('mongoose');
 
-const myTable = ("./myTable.model");
+const connection = "mongodb://localhost:27017/mydb";
 
-const connection = "mongodb://localhost:27017/myDb";
+mongoose.Promise = global.Promise;
 
 const connectDb = ()=>{
-    return mongoose.connect(connection);
+    return mongoose.connect(connection, {
+        useNewUrlParser:true,
+        useUnifiedTopology:true
+    });
 }
 
 module.exports = connectDb;
