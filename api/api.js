@@ -16,7 +16,9 @@
  app.listen(PORT, ()=>{
      console.log(`NodeJS API listening on port ${PORT}`);
      // placeholder for mongo connection message
-     connection().then(()=>{console.log("MongoDB connected!")}).catch((e)=>{console.log(e)});
+     connection()
+     .then(()=>{console.log("MongoDB connected!")})
+     .catch((e)=>{console.log(`Ooops, something went wrong... ${e}`)});
  });
 
  // Parsing requests middleware
