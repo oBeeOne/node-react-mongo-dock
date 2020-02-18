@@ -35,26 +35,26 @@
  });
 
  // Get all records from DB
- app.get('/api/findall', (req, res)=>{
+ app.get('/api/mytable', (req, res)=>{
     // placeholder for code
  });
 
  // Get one record from DB with id parameter
- app.get('/api/findone/{id}', (req,res)=>{
+ app.get('/api/mytable/:id', (req,res)=>{
      // placeholder for code
  });
 
  // Inserting new record
- app.post('/api/addone', (req,res)=>{
+ app.post('/api/mytable/create', (req,res)=>{
      // placeholder for code
  });
 
  // Updating record
- app.put('/api/updateone/{id}', (req,res)=>{
+ app.put('/api/mytable/update/:id', (req,res)=>{
     // placeholder for code
  });
 
  // Deleting record
- app.delete('/api/deleteone/{id}', (req,res)=>{
+ app.delete('/api/mytable/delete/:id', (req,res)=>{
      // placeholder for code
  });
