@@ -39,24 +39,40 @@
  // Get all records from DB
  app.get('/api/mytable', (req, res)=>{
     // placeholder for code
+    if(!crud.getAll()) {
+        res.status(204).send('No datas in DB yet...');
+    }
+    else{
+        res.send(crud.getAll());
+    }
+    
  });
 
  // Get one record from DB with id parameter
  app.get('/api/mytable/:id', (req,res)=>{
      // placeholder for code
+     res.send(crud.getOne(req.param.id));
  });
 
  // Inserting new record
  app.post('/api/mytable/create', (req,res)=>{
      // placeholder for code
+     datas = {
+         "name": req.body.name,
+         "age": req.body.age,
+         "presence": req.body.presence
+     };
+     res.send(crud.insertOne(datas));
  });
 
  // Updating record
  app.put('/api/mytable/update/:id', (req,res)=>{
     // placeholder for code
+    res.send(crud.updateOne(req.param.id));
  });
 
  // Deleting record
  app.delete('/api/mytable/delete/:id', (req,res)=>{
      // placeholder for code
+     res.send(crud.deleteOne(req.param.id));
  });

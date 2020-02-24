@@ -17,7 +17,7 @@ services:
         build: ./myreact
         image: myreact:latest
         ports: 
-            - "3000:3000"
+            - "4000:4000"
         volumes: 
             - ./myreact:/usr/src/app/myreact
         links: 
@@ -26,6 +26,6 @@ services:
 
     # Service mongo
     mongo: 
-        image: mongo:3.6.4
+        image: mongo:latest
         ports: 
             - "27017:27017"
